@@ -1,28 +1,42 @@
 import Exponent from 'exponent';
-import React from 'react';
+import React, { Component } from 'react';
 import {
-  StyleSheet,
+  Container,
+  Header,
+  Button,
+  Icon,
+  Title,
+  Content,
   Text,
-  View,
-} from 'react-native';
+  Card,
+  CardItem,
+ } from 'native-base';
 
-class App extends React.Component {
+class App extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text>Open up main.js to start working on your app!</Text>
-      </View>
+      <Container>
+        <Header>
+          <Button transparent>
+            <Icon name='ios-menu' />
+          </Button>
+          <Title>Reactivity Stream</Title>
+        </Header>
+        <Content>
+          <Card>
+            <CardItem>
+              <Icon name="logo-googleplus" style={{ color: '#DD5044' }} />
+              <Text>10:07 Google+</Text>
+            </CardItem>
+            <CardItem>
+              <Icon name="logo-facebook" style={{ color: 'blue' }} />
+              <Text>10:17 Facebook</Text>
+            </CardItem>
+          </Card>
+        </Content>
+      </Container>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
 
 Exponent.registerRootComponent(App);
