@@ -8,9 +8,8 @@ import {
   Title,
   Content,
   Text,
-  Card,
-  CardItem,
  } from 'native-base';
+import ActivityList from './components/ActivityList';
 
 class App extends Component {
   render() {
@@ -23,16 +22,7 @@ class App extends Component {
           <Title>Reactivity Stream</Title>
         </Header>
         <Content>
-          <Card>
-            <CardItem>
-              <Icon name="logo-googleplus" style={{ color: '#DD5044' }} />
-              <Text>10:07 Google+</Text>
-            </CardItem>
-            <CardItem>
-              <Icon name="logo-facebook" style={{ color: 'blue' }} />
-              <Text>10:17 Facebook</Text>
-            </CardItem>
-          </Card>
+          <ActivityList/>
         </Content>
       </Container>
     );
